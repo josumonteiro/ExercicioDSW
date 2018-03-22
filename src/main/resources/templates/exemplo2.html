@@ -12,9 +12,11 @@ and open the template in the editor.
   </head>
   <body>
     <h1>Spring MVC</h1>
-    <ul th:each="prod : ${listaAtrib}">
+    <table>
+    <span th:each="prod : ${listaAtrib}">
       <li>
         <div>
+            <td>Nome</td>
           <h3 th:text="${prod.nome}">Produto falso</h3>
           <p th:text="${prod.descricao}">Descricao falsa</p>
           <p th:text="${prod.precoCompra.toString()}">0.00</p>
@@ -27,6 +29,6 @@ and open the template in the editor.
         </div>
       </li>
     </ul>
-
+</table>
   </body>
 </html>
