@@ -34,12 +34,20 @@ public class ExemploModelAndViewController {
     return new ModelAndView("exemplo1");
   }
 
-  @GetMapping("/ex2")
-  public ModelAndView executar2() {
+  @GetMapping("/listProduto")
+  public ModelAndView listProduto() {
     List<Produto> lista = prod.listar(0, 0);
 
     return new ModelAndView("exemplo2")
             .addObject("listaAtrib", lista);
+  }
+  
+    @GetMapping("/detalheProduto")
+  public ModelAndView detalheProduto(@PathVariable("id") int id) {
+    Produto detalhe = prod.obter(id);
+
+    return new ModelAndView("exemplo2")
+            .addObject("listaAtrib", detalhe);
   }
 
   @GetMapping("/ex3")
