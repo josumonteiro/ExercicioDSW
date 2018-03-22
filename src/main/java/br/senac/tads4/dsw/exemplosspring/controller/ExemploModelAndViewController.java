@@ -38,7 +38,7 @@ public class ExemploModelAndViewController {
   public ModelAndView executar2() {
     List<Produto> lista = prod.listar(0, 0);
 
-    return new ModelAndView("exemplo2")
+    return new ModelAndView("index")
             .addObject("listaAtrib", lista);
   }
 
