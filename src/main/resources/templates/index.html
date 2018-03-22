@@ -60,7 +60,7 @@
                             <td th:text="${prod.precoCompra.toString()}"></td>
                             <td th:text="${prod.precoVenda.toString()}"></td>
                             <td th:text="${prod.quantidade.toString()}"></td>
-                            <td><button class="btn btn-primary" type="submit">Detalhes</button></td>
+                            <td><a class="btn btn-primary" type="submit" th:href="@{/exemplo/detalheProduto/{idParam}(idParam = ${prod.id})}">Detalhes</a></td>
                         </tr>
 
                     </tbody>                

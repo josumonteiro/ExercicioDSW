@@ -42,12 +42,12 @@ public class ExemploModelAndViewController {
             .addObject("listaAtrib", lista);
   }
   
-    @GetMapping("/detalheProduto")
+    @GetMapping("/detalheProduto/{id}")
   public ModelAndView detalheProduto(@PathVariable("id") int id) {
     Produto detalhe = prod.obter(id);
 
-    return new ModelAndView("exemplo2")
-            .addObject("listaAtrib", detalhe);
+    return new ModelAndView("detalhesProd")
+            .addObject("listaDetail", detalhe);
   }
 
   @GetMapping("/ex3")
